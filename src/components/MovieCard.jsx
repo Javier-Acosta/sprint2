@@ -1,8 +1,11 @@
 import React from 'react'
+import { movies } from '../db/movies';
 
-export default function Body ({listado})  {
-const {img,name}=listado
-console.log(name);
+export default function MovieCard ({listado, pelis,setPelis})  {
+const {id,img,name}=listado
+
+
+
   return (
     <div>
 
@@ -22,7 +25,9 @@ console.log(name);
                  {name}
               </h2>
               <button
-                className="bg-button-primary hover:bg-button-primary-hover active:bg-button-primary-active text-dark-secondary py-2 px-4 rounded-md w-full font-semibold transition-colors duration-300">
+                type='button'
+                onClick={()=> setPelis (prevPelis =>[...prevPelis, listado])}
+                className="bg-blue-600 bg-button-primary hover:bg-button-primary-hover active:bg-button-primary-active text-dark-secondary py-2 px-4 rounded-md w-full font-semibold transition-colors duration-300">
                 <i className="ph ph-plus"></i> Add to Watchlist
               </button>
             </div>

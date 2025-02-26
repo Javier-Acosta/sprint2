@@ -28,36 +28,36 @@ export const movies=
   {
     "id": 6,
     "name": "Esperando la Carroza",
-    "img": "imagen_06"
+    "img": "https://media.urgente24.com/p/a3eebafa9ef7ea05ea564dec9d86ee19/adjuntos/319/imagenes/003/031/0003031712/1200x0/smart/esperando-la-carroza-escenajpg.jpg"
   },
   {
     "id": 7,
     "name": "Old Boy",
-    "img": "imagen_07"
+    "img": "https://m.media-amazon.com/images/M/MV5BMjI2NDFkNjEtYzI2Ni00NWY2LTgyMDYtZTU1NTA3YTZhNzFiXkEyXkFqcGc@._V1_.jpg"
   },
   {
     "id": 8,
     "name": "2001: a space odyssey",
-    "img": "imagen_08"
+    "img": "https://cdn.posteritati.com/posters/000/000/062/661/2001-a-space-odyssey-md-web.jpg"
   },
   {
     "id": 9,
     "name": "El Angel",
-    "img": "imagen_09"
+    "img": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSkg0LHhqMXgOLLYj9RL2RVZn4NjSNC-wnaIhN1DejwackDVBy9"
   },
   {
     "id": 10,
     "name": "El Clan",
-    "img": "imagen_10"
+    "img": "https://m.media-amazon.com/images/S/pv-target-images/1d6e15ccbc9a256f2b5806862e3a3bca288868c19a82c042ffcb15d72759d2a6.jpg"
   },
   {
     "id": 11,
     "name": "Eyes Wide Shut",
-    "img": "imagen_11"
+    "img": "https://pics.filmaffinity.com/Eyes_Wide_Shut-685089011-large.jpg"
   },
   {
     "id": 12,
-    "name": "Monster",
-    "img": "imagen_12"
+    "name": "Terminator 2: El juicio final",
+    "img": "https://pics.filmaffinity.com/t2_terminator_2_judgment_day-825143697-large.jpg"
   }
 ]

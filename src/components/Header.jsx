@@ -1,4 +1,5 @@
 import React from 'react'
+import WatchlistModal from './WatchlistModal'
 
 const Header = () => {
   return (
@@ -14,10 +15,7 @@ const Header = () => {
   </div>
 
   <div className="flex items-center space-x-4">
-    <button id="openWatchlist"
-      className="text-text-primary text-xl font-semibold hover:text-accent-teal transition-colors duration-300">
-      Watchlist
-    </button>
+    <WatchlistModal/>
 
     <i className="ph ph-user-circle text-4xl text-accent-teal hover:text-button-primary-hover cursor-pointer transition-colors duration-300"></i>
   </div>

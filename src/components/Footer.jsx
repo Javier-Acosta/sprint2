@@ -13,7 +13,7 @@ const Footer = () => {
         <a href="https://github.com/EsteNoEsMonti" target="_blank"
           className="flex items-center space-x-2 text-accent-teal hover:text-button-primary-hover transition-colors duration-300">
           <i className="ph ph-github-logo text-2xl"></i>
-          <span className="font-['Orbitron'] text-sm">github.com/EsteNoEsMonti</span>
+          <span className="font-['Orbitron'] text-sm">https://github.com/Javier-Acosta</span>
         </a>
 
         <p className="text-text-secondary text-sm">
