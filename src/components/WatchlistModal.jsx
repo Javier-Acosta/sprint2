@@ -1,6 +1,8 @@
 import React from 'react'
 
-const WatchlistModal = (list) => {
+const WatchlistModal = ({ListSelect}) => {
+    const prevPelis = {...ListSelect}
+   const {name, img}=prevPelis
   return (
     <>
 
@@ -25,15 +27,17 @@ const WatchlistModal = (list) => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                        {/* {list.map (listado =>( */}
+                        
+
+                        
                   
                           <tr>
                                         <td>
-                                            <img class="img-fluid" src="./public/img/guitarra_02.jpg" alt="imagen guitarra" />
+                                            <img class="img-fluid" src={img} alt="imagen guitarra" />
                                         </td>
                                         <td>SRV</td>
                                         <td class="fw-bold">
-                                                $299
+                                                ${name}
                                         </td>
                                         <td class="flex align-items-start gap-4">
                                             <button
@@ -59,7 +63,7 @@ const WatchlistModal = (list) => {
                                             </button>
                                         </td>
                                     </tr>
-                                {/* ))} */}
+                                
                                 </tbody>
                             </table>
 
