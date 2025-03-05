@@ -21,7 +21,7 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
                     <div 
                         className="carrito"
                         >
-                        <img className="img-fluid" src="../src/assets/carrito.png" alt="imagen carrito" />
+                        <img className="img-fluid" src="../src/" alt="imagen carrito" />
 
                         <div id="carrito" className="bg-white p-3">
                                 
@@ -34,9 +34,8 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
                                 <tr>
                                 <th>Imagen</th>
                                 <th>Nombre</th>
-                                <th>Precio</th>
-                                <th>Cantidad</th>
-                                <th></th>
+                                <th>Eliminar</th>
+                                
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -55,9 +54,7 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
 
                                                 ${name}
                                         </td>
-                                        <td className="fw-bold">
-                                            $500
-                                        </td>
+                                       
                                        
                                         <td>
                                             <button
@@ -74,7 +71,7 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
                                 </table>
                                 )}
                                 
-                                <p className="text-end">Total pagar: <span className="fw-bold">$899</span></p>
+                               
 
                                 <button 
                                 onClick={onClose}
