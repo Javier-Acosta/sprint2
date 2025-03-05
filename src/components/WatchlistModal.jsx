@@ -8,7 +8,7 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
         const onClose =()=>setIsModalOpen(false)
     
     
-    const prevPelis = {...ListSelect}
+    const prevPelis = {...ListSelect, setPelis}
    const {name, img,id}=prevPelis
 
 
@@ -17,19 +17,19 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
 
 
 
-<nav class="d-flex align-items-start justify-content-end  py-4 px-6 flex items-center justify-center">
+<nav className="d-flex align-items-start justify-content-end  py-4 px-6 flex items-center justify-center">
                     <div 
-                        class="carrito"
+                        className="carrito"
                         >
-                        <img class="img-fluid" src="./public/img/carrito.png" alt="imagen carrito" />
+                        <img className="img-fluid" src="../src/assets/carrito.png" alt="imagen carrito" />
 
-                        <div id="carrito" class="bg-white p-3">
+                        <div id="carrito" className="bg-white p-3">
                                 
                         {pelis.length === 0 ? (
 
-                                <p class="text-center">El carrito esta vacio</p>
+                                <p className="text-center">El carrito esta vacio</p>
                             ):(
-                                <table class="w-100 table">
+                                <table className="w-100 table">
                                 <thead>
                                 <tr>
                                 <th>Imagen</th>
@@ -40,28 +40,28 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
                                 </tr>
                                 </thead>
                                 <tbody>
+                                {pelis.map(prevPelis =>(
                                 
-                                {pelis.map(ListSelect =>(
 
                                     
                                     
                                     
                                     <tr>
                                         <td>
-                                            <img class="img-fluid w-200" src={img} alt="imagen guitarra" />
+                                            <img className="img-fluid w-200" src={img} alt="imagen guitarra" />
                                         </td>
                                         <td
-                                        class="fw-bold">
+                                        className="fw-bold">
 
                                                 ${name}
                                         </td>
-                                        <td class="fw-bold">
+                                        <td className="fw-bold">
                                             $500
                                         </td>
                                        
                                         <td>
                                             <button
-                                                class="btn btn-danger"
+                                                className="btn btn-danger"
                                                 type="button"
                                                 onClick={()=>removePelis(id)}
                                                 >
@@ -72,9 +72,9 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
                                 ))}
                                 </tbody>
                                 </table>
+                                )}
                                 
-                            )}
-                                <p class="text-end">Total pagar: <span class="fw-bold">$899</span></p>
+                                <p className="text-end">Total pagar: <span className="fw-bold">$899</span></p>
 
                                 <button 
                                 onClick={onClose}

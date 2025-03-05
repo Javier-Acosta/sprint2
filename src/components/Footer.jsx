@@ -10,7 +10,7 @@ const Footer = () => {
           DIPLOMATURA UNIVERSITARIA DESARROLLO WEB FULL STACK CON JAVASCRIPT
         </p>
 
-        <a href="https://github.com/EsteNoEsMonti" target="_blank"
+        <a href="https://github.com/Javier-Acosta" target="_blank"
           className="flex items-center space-x-2 text-accent-teal hover:text-button-primary-hover transition-colors duration-300">
           <i className="ph ph-github-logo text-2xl"></i>
           <span className="font-['Orbitron'] text-sm">https://github.com/Javier-Acosta</span>

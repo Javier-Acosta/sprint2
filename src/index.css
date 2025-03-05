@@ -41,7 +41,7 @@
     padding: 0 2px;
     margin: 0 3px;
 }
-
+/* 
 .m-0 {
     margin: 0;
 }
@@ -56,7 +56,7 @@ h1,
     .h1 {
         font-size: 4.4rem;
     }
-}
+} */
 
 
 /* 
@@ -79,6 +79,7 @@ h3, .h3 {
     font-size: 2.6rem;
   }
 } */
+
 
 p {
     margin-top: 0;
@@ -282,6 +283,7 @@ button:not(:disabled),
     }
 }
 
+
 .table {
     --bs-table-color: var(--bs-body-color);
     --bs-table-bg: transparent;
@@ -443,38 +445,8 @@ button:not(:disabled),
 }
 
 
-/* rtl:begin:ignore */
 
 
-/* rtl:end:ignore */
-
-
-/* rtl:begin:ignore */
-
-
-/* rtl:end:ignore */
-
-
-/* rtl:begin:ignore */
-
-
-/* rtl:end:ignore */
-
-
-/* rtl:begin:ignore */
-
-
-/* rtl:end:ignore */
-
-
-/* rtl:options: {
-  "autoRename": true,
-  "stringMap":[ {
-    "name"    : "prev-next",
-    "search"  : "prev",
-    "replace" : "next"
-  } ]
-} */
 
 @keyframes spinner-border {
     to {
@@ -504,6 +476,9 @@ button:not(:disabled),
         mask-position: -200% 0%;
     }
 }
+
+
+
 
 .d-flex {
     display: flex !important;
@@ -610,102 +585,3 @@ button:not(:disabled),
 }
 
 
-/* rtl:begin:remove */
-
-
-/* rtl:end:remove */
-
-.text-primary {
-    --bs-text-opacity: 1;
-    color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-black {
-    --bs-text-opacity: 1;
-    color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
-}
-
-.text-white {
-    --bs-text-opacity: 1;
-    color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
-}
-
-.bg-primary {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-dark {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-white {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
-}
-
-@media (min-width: 768px) {
-    .justify-content-md-between {
-        justify-content: space-between !important;
-    }
-    .m-md-0 {
-        margin: 0 !important;
-    }
-    .text-md-start {
-        text-align: left !important;
-    }
-}
-
-@media (min-width: 1200px) {
-    .fs-1 {
-        font-size: 4.4rem !important;
-    }
-    .fs-3 {
-        font-size: 2.6rem !important;
-    }
-    .fs-4 {
-        font-size: 1.5rem !important;
-    }
-}
-
-@keyframes animarImagen {
-    0% {
-        opacity: 0;
-        transform: translateX(-10rem);
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.header {
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header.jpg");
-    /** TODO: Eliminar la sig linea **/
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../public/img/header.jpg");
-    background-position: 50%;
-    background-size: cover;
-    position: relative;
-}
-
-.header .header-guitarra {
-    display: none;
-}
-
-@media (min-width: 992px) {
-    .header .header-guitarra {
-        display: block;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        animation-duration: 1s;
-        animation-delay: 0s;
-        animation-timing-function: ease-in-out;
-        animation-name: animarImagen;
-        z-index: 10;
-    }
-}

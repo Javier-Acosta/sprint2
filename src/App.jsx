@@ -5,19 +5,30 @@ import MovieCard from './components/MovieCard'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import WatchlistModal from './components/WatchlistModal';
-import { stringify } from 'querystring';
 
 function App() {
 
+  const initialLista=()=>{
+    const localStorageLista= localStorage.getItem('pelis')
+    return localStorageLista ? JSON.parse(localStorageLista):[]
+  }
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [data, setData] = useState(movies)
-  const [pelis, setPelis] = useState([])
+  const [pelis, setPelis] = useState(initialLista)
+
+
+  
+
+
 
   // Local Storage
   useEffect (()=>{
-    localStorage.setItem('setPelis',JSON,stringify(pelis))
+    localStorage.setItem('pelis',JSON.stringify(pelis)) 
   }, [pelis])
   
+
+
+
   // eliminar pelis seleccionadas
   function removePelis(id) {
     setPelis(prevPelis=>prevPelis.filter(pelis=>pelis.id !== id))

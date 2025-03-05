@@ -58,6 +58,6 @@ export const movies=
   {
     "id": 12,
     "name": "Terminator 2: El juicio final",
-    "img": "https://pics.filmaffinity.com/t2_terminator_2_judgment_day-825143697-large.jpg"
+    "img": "https://i.scdn.co/image/ab67616d00001e026c49df55f215d96215a190f8"
   }
 ]
