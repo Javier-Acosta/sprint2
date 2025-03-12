@@ -1,7 +1,8 @@
 
 import React from 'react'
+import carrito from '../assets/carrito.png'
 
-const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePelis,setPelis,clearLista}) => {
+const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis,setPelis,clearLista}) => {
 
     if (!isModalOpen) 
         return null
@@ -9,6 +10,8 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
     
     
     const prevPelis = {...ListSelect, setPelis}
+    console.log(prevPelis);
+    
    const {name, img,id}=prevPelis
 
 
@@ -21,7 +24,7 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
                     <div 
                         className="carrito"
                         >
-                        <img className="img-fluid" src="../src/" alt="imagen carrito" />
+                        <img className="img-fluid" src={carrito} alt="imagen carrito" />
 
                         <div id="carrito" className="bg-white p-3">
                                 
@@ -74,13 +77,13 @@ const WatchlistModal = ({ListSelect, isModalOpen,setIsModalOpen,pelis,removePeli
                                
 
                                 <button 
-                                onClick={onClose}
-                                type="button"
-                                
-                            className="btn btn-dark w-100 mt-3 p-2">Vaciar Lista</button>
-                                <button 
                                 onClick={clearLista}
                                 type="button"
+                                
+                                className="btn btn-dark w-100 mt-3 p-2">Vaciar Lista</button>
+                                <button 
+                                type="button"
+                                onClick={onClose}
                                 
                             className="btn btn-dark w-100 mt-3 p-2">Cerrar Carrito</button>
                         </div>

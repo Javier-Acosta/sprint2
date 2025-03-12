@@ -1,6 +1,6 @@
 @import "tailwindcss";
 .carrito {
-    background-color: transparent;
+    background-color: #9f9798;
     border: none;
     max-width: 2rem;
     position: relative;
@@ -41,6 +41,8 @@
     padding: 0 2px;
     margin: 0 3px;
 }
+
+
 /* 
 .m-0 {
     margin: 0;
@@ -79,7 +81,6 @@ h3, .h3 {
     font-size: 2.6rem;
   }
 } */
-
 
 p {
     margin-top: 0;
@@ -283,7 +284,6 @@ button:not(:disabled),
     }
 }
 
-
 .table {
     --bs-table-color: var(--bs-body-color);
     --bs-table-bg: transparent;
@@ -444,10 +444,6 @@ button:not(:disabled),
     }
 }
 
-
-
-
-
 @keyframes spinner-border {
     to {
         transform: rotate(360deg)/* rtl:ignore */
@@ -476,9 +472,6 @@ button:not(:disabled),
         mask-position: -200% 0%;
     }
 }
-
-
-
 
 .d-flex {
     display: flex !important;
@@ -583,5 +576,3 @@ button:not(:disabled),
 .text-uppercase {
     text-transform: uppercase !important;
 }
-
-

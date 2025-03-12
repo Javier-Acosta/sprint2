@@ -18,7 +18,7 @@ const Header = ({setIsModalOpen}) => {
   </div>
 
   <div className="flex items-center space-x-4">
-  <WatchlistModal/>
+  {/* <WatchlistModal/> */}
        <button
        className='bg-blue-600 text-white p-2 '
        onClick={onOpenModal}>
