@@ -4,6 +4,11 @@ import carrito from '../assets/carrito.png'
 
 const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis,setPelis,clearLista}) => {
 
+    // State derivado
+    const isEmpty= ()=> pelis.length === 0
+
+    const cartTotal=()=> pelis.reduce((total, item ) => total + (item.quantity * item.price), 0)
+
     if (!isModalOpen) 
         return null
         const onClose =()=>setIsModalOpen(false)
@@ -12,7 +17,7 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
     const prevPelis = {...ListSelect}
     console.log(prevPelis);
     
-   const {name, img,id}=prevPelis
+   const {name, img,id, price}=prevPelis
 
 
   return (
@@ -28,16 +33,17 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
 
                         <div id="carrito" className="bg-white p-3">
                                 
-                        {pelis.length === 0 ? (
+                        { isEmpty ()? (
 
                                 <p className="text-center">El carrito esta vacio</p>
                             ):(
+                                <>
                                 <table className="w-100 table">
                                 <thead>
                                 <tr>
                                 <th>Imagen</th>
                                 <th>Nombre</th>
-                                <th>Eliminar</th>
+                                <th>Precio</th>
                                 
                                 </tr>
                                 </thead>
@@ -58,7 +64,26 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
                                                 {name}
                                         </td>
                                        
-                                       
+                                        <td className="fw-bold">
+                                                        ${price}
+                                                    </td>
+                                                    <td className="flex align-items-start gap-4">
+                                                        <button
+                                                            type="button"
+                                                            className="btn btn-dark"
+                                                            // onClick={() => decreaseQuantity(guitar.id)}
+                                                        >
+                                                            -
+                                                        </button>
+                                                            {listado.quantity}
+                                                        <button
+                                                            type="button"
+                                                            className="btn btn-dark"
+                                                            // onClick={() => increaseQuantity(guitar.id)}
+                                                        >
+                                                            +
+                                                        </button>
+                                                    </td>
                                         <td>
                                             <button
                                                 className="btn btn-danger"
@@ -72,10 +97,14 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
                                 ))}
                                 </tbody>
                                 </table>
-                                )}
+                               
+                               
+                               <p className="text-end">Total pagar: <span className="fw-bold">${cartTotal()}</span></p>
+                               </>
+                               )}
                                 
                                
-
+                               
                                 <button 
                                 onClick={clearLista}
                                 type="button"
