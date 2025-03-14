@@ -1,7 +1,8 @@
 import React from 'react'
 import { movies } from '../db/movies';
 
-export default function MovieCard ({listado, pelis,setPelis})  {
+export default function MovieCard ({listado, addToCard})  {
+  //destructuring
 const {id,img,name}=listado
 
 
@@ -26,7 +27,7 @@ const {id,img,name}=listado
               </h2>
               <button
                 type='button'
-                onClick={()=> setPelis (prevPelis =>[...prevPelis, listado])}
+                onClick={()=> addToCard (listado)}
                 className="bg-blue-600 bg-button-primary hover:bg-button-primary-hover active:bg-button-primary-active text-dark-secondary py-2 px-4 rounded-md w-full font-semibold transition-colors duration-300">
                 <i className="ph ph-plus"></i> Add to Watchlist
               </button>

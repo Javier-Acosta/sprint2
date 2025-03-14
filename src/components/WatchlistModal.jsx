@@ -9,7 +9,7 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
         const onClose =()=>setIsModalOpen(false)
     
     
-    const prevPelis = {...ListSelect, setPelis}
+    const prevPelis = {...ListSelect}
     console.log(prevPelis);
     
    const {name, img,id}=prevPelis
@@ -42,20 +42,20 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
                                 </tr>
                                 </thead>
                                 <tbody>
-                                {pelis.map(prevPelis =>(
+                                {pelis.map(listado =>(
                                 
 
                                     
                                     
                                     
-                                    <tr>
+                                    <tr  >
                                         <td>
                                             <img className="img-fluid w-200" src={img} alt="imagen guitarra" />
                                         </td>
                                         <td
                                         className="fw-bold">
 
-                                                ${name}
+                                                {name}
                                         </td>
                                        
                                        

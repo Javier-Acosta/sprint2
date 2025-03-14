@@ -17,9 +17,22 @@ function App() {
   const [pelis, setPelis] = useState(initialLista)
 
 
+  // verifica si existe
+function addToCard(item) {
+
+  const itemExists= pelis.findIndex(listado=> listado.id === item.id)
+  if (itemExists >=0) { // existe 
+    const updateListado=[...pelis]
+    updateListado[itemExists].quantity++
+    setPelis(updateListado)
+  }else{
+
+    item.quantity =1 
+    setPelis( prevPelis =>[...prevPelis, item])
+  }
+
   
-
-
+}
 
   // Local Storage
   useEffect (()=>{
@@ -75,6 +88,7 @@ function clearLista(id) {
       key={listado.id}
       listado={listado}
       setPelis={setPelis}
+      addToCard={addToCard}
 
       
       />
