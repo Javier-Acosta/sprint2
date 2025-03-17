@@ -1,13 +1,9 @@
 
-import React from 'react'
 import carrito from '../assets/carrito.png'
 
-const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis,setPelis,clearLista}) => {
+const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis,setPelis,clearLista,IncreaseQuantity, decreaseQuantity,isEmpty,cartTotal}) => {
 
-    // State derivado
-    const isEmpty= ()=> pelis.length === 0
-
-    const cartTotal=()=> pelis.reduce((total, item ) => total + (item.quantity * item.price), 0)
+    
 
     if (!isModalOpen) 
         return null
@@ -33,7 +29,7 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
 
                         <div id="carrito" className="bg-white p-3">
                                 
-                        { isEmpty ()? (
+                        { isEmpty ? (
 
                                 <p className="text-center">El carrito esta vacio</p>
                             ):(
@@ -71,7 +67,7 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
                                                         <button
                                                             type="button"
                                                             className="btn btn-dark"
-                                                            // onClick={() => decreaseQuantity(guitar.id)}
+                                                            onClick={() => decreaseQuantity(id)}
                                                         >
                                                             -
                                                         </button>
@@ -79,7 +75,7 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
                                                         <button
                                                             type="button"
                                                             className="btn btn-dark"
-                                                            // onClick={() => increaseQuantity(guitar.id)}
+                                                            onClick={() => IncreaseQuantity(id)}
                                                         >
                                                             +
                                                         </button>
@@ -99,7 +95,7 @@ const WatchlistModal = ({ListSelect,isModalOpen,setIsModalOpen,pelis,removePelis
                                 </table>
                                
                                
-                               <p className="text-end">Total pagar: <span className="fw-bold">${cartTotal()}</span></p>
+                               <p className="text-end">Total pagar: <span className="fw-bold">${cartTotal}</span></p>
                                </>
                                )}
                                 
