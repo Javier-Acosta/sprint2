@@ -9,7 +9,7 @@ export const useCart = () => {
         return localStorageLista ? JSON.parse(localStorageLista) : []
     }
     const [isModalOpen, setIsModalOpen] = useState(false)
-    const [data, setData] = useState(movies)
+    const [data] = useState(movies)
     const [pelis, setPelis] = useState(initialLista)
 
 
