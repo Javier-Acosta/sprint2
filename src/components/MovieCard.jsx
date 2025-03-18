@@ -1,25 +1,27 @@
 import React from 'react'
-import { movies } from '../db/movies';
 
 export default function MovieCard ({listado, addToCard})  {
   //destructuring
-const {id,img,name}=listado
+const {id,img,name,price}=listado
 
 
 
-  return (
-    <div>
+  
+
+
+   return (
+    
 
     
-           <main>
+           
       
       
 
       
-      <div className="bg-white py-10">
-        <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      
+        < div className="  col-md-6 col-lg-2 row align-items-center      ">
           
-          <div className="bg-dark-secondary rounded-lg shadow-lg overflow-hidden">
+          <div className="bg-dark-secondary rounded-lg shadow-lg overflow-hidden  ">
             <img src= {img} alt="The Shining" className="" />
             <div className="p-4">
               <h2 className="text-text-primary text-lg text-center font-bold mb-2">
@@ -33,15 +35,15 @@ const {id,img,name}=listado
               </button>
             </div>
           </div>
+          </div>
 
          
-        </div>
-      </div>
-    </main>
-    </div>
+        
+      
+    
+    
   )
 }
-
 
 
  

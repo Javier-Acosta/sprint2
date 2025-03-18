@@ -1,7 +1,7 @@
 
 
 import MovieCard from './components/MovieCard'
-import Header from './components/Header'
+
 import Footer from './components/Footer'
 import WatchlistModal from './components/WatchlistModal';
 import { useCart } from './hooks/useCart';
@@ -9,24 +9,20 @@ import { useCart } from './hooks/useCart';
 function App() {
 
 
-  const { data, pelis, addToCard, removePelis, clearLista, IncreaseQuantity, decreaseQuantity, isModalOpen, 
-    setIsModalOpen, isEmpty, cartTotal}= useCart ()
+  const { data, pelis, addToCard, removePelis, clearLista, IncreaseQuantity, decreaseQuantity, isEmpty, cartTotal}= useCart ()
 
 
 
   return (
     < div className='mt-5 text-center'>
 
-      <Header 
-      setIsModalOpen={setIsModalOpen} />
-
+    
       
-      {pelis.map((ListSelect)=>(
+      
         <WatchlistModal 
-        key={ListSelect.id}
-        ListSelect={ListSelect}
-        isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
+       
+       
+       
         pelis={pelis}
         // setPelis={setPelis}
         removePelis={removePelis}
@@ -40,9 +36,13 @@ function App() {
       
       
       
-      ))}
+      
      
       
+     <main className="container-xl mt-5">
+          <h2 className="text-center">Nuestra Colección</h2>
+
+          <div className="row mt-5">
     {data.map((listado)=>(
       <MovieCard
       key={listado.id}
@@ -53,8 +53,11 @@ function App() {
       
       />
       ))}
+        
+        </div>
+      </main>
       
-      <Footer/>
+      <Footer />
 
 
     </div>

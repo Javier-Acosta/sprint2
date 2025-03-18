@@ -29,7 +29,7 @@ export const useCart = () => {
         } else {
 
             item.quantity = 1
-            setPelis(prevPelis => [...prevPelis, item])
+            setPelis([...pelis, item])
         }
 
 
