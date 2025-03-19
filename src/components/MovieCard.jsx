@@ -19,10 +19,10 @@ const {id,img,name,price}=listado
 
       
       
-        < div className="  col-md-6 col-lg-2 row align-items-center      ">
+        < div className="  col-md-6 col-lg-2 align-items-center  p-5    ">
           
           <div className="bg-dark-secondary rounded-lg shadow-lg overflow-hidden  ">
-            <img src= {img} alt="The Shining" className="" />
+            <img src= {img} alt="The Shining" className="h-100 w-100 object-contain" />
             <div className="p-4">
               <h2 className="text-text-primary text-lg text-center font-bold mb-2">
                  {name}
